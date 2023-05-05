@@ -86,9 +86,11 @@ public class EntityTumbleweed extends Entity {
 	}
 
 	private void initClient() {
-		this.rot1 = 360f * level.random.nextFloat();
-		this.rot2 = 360f * level.random.nextFloat();
-		this.rot3 = 360f * level.random.nextFloat();
+		Random random = new Random();
+
+		this.rot1 = 360f * random.nextFloat();
+		this.rot2 = 360f * random.nextFloat();
+		this.rot3 = 360f * random.nextFloat();
 
 		this.quat = new Quaternion(0, 0, 0, 1);
 		this.prevQuat = new Quaternion(0, 0, 0, 1);
